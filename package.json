@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@mui/material": "^5.10.11",
+    "@nextui-org/react": "^1.0.0-beta.10",
+    "dotenv": "^16.0.3",
     "next": "13.0.0",
+    "next-auth": "^4.16.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.56.1"
   },
   "devDependencies": {
     "eslint": "8.26.0",
