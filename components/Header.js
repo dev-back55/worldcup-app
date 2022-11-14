@@ -77,7 +77,7 @@ const Header = () => {
             <Button auto flat as={Link} color={"primary"} href="#" onClick={() => signIn()}>
                Login
             </Button>
-          : <Button auto flat onClick={() => signOut()}>Logout ({session.user.name})</Button>
+          : <Button auto flat onClick={() => signOut()}>Logout</Button>
           }
             
           </Navbar.Item>

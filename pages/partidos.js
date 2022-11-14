@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { SelectorWrapper } from '../components/SelectorWrapper';
 import { Grid, Button, Text } from "@nextui-org/react";
 import styles from '../styles/Partidos.module.scss';
+import { getPartidos } from '../services/partidosServices';
+import { getGrupos } from '../services/gruposServices';
+import { getEquipos } from '../services/equiposServices';
 
 
 function Partidos({ partidos, grupdia, paises }) {
@@ -11,9 +14,9 @@ function Partidos({ partidos, grupdia, paises }) {
     setPartidosToShow(partidos);
   }
 
-  const handleGrupos = () => {
-    setPartidosToShow(grupdia);
-  }
+  // const handleGrupos = () => {
+  //   setPartidosToShow(grupdia);
+  // }
 
   const handleFilterGroup = (e) => {
    
@@ -64,10 +67,7 @@ function Partidos({ partidos, grupdia, paises }) {
         setPartidosToShow(partidosFilterGroup)
       }
 
-      // if(!dogsFilterById.length){
-      //   alert('No hay perritos en la Base de Datos');
-      //   dogsFilterById = [...dogs]
-      // }
+      
   }
   
   const handleFilterPais = (e) => {
@@ -173,24 +173,28 @@ function Partidos({ partidos, grupdia, paises }) {
 export default Partidos;
 
 export async function getStaticProps() {
-    const { API_URL } = process.env
-    const res = await fetch(`${API_URL}/api/partidos?pagination[pageSize]=50&sort[0]=dia`);
-    const data = await res.json();
-    const datas = data.data
+    // const { API_URL } = process.env
+    // const res = await fetch(`${API_URL}/api/partidos?pagination[pageSize]=50&sort[0]=dia`);
+    // const data = await res.json();
+    // const datas = data.data
+    const res = await getPartidos();
 
-    const response = await fetch(`${API_URL}/api/partidos?pagination[pageSize]=50&sort[0]=grupo&sort[1]=dia`);
-    const grupo = await response.json();
-    const grupos = grupo.data
 
-    const resp = await fetch(`${API_URL}/api/equipos?sort[0]=name`);
-    const equipo = await resp.json();
-    const equipos = equipo.data
+    // const response = await fetch(`${API_URL}/api/partidos?pagination[pageSize]=50&sort[0]=grupo&sort[1]=dia`);
+    // const grupo = await response.json();
+    // const grupos = grupo.data
+    const response = await getGrupos();
+
+    // const resp = await fetch(`${API_URL}/api/equipos?pagination[pageSize]=50&sort[0]=name`);
+    // const equipo = await resp.json();
+    // const equipos = equipo.data
+    const resp = await getEquipos();
 
     return {
       props: {
-        partidos: datas,
-        grupdia: grupos,
-        paises: equipos
+        partidos: res,
+        grupdia: response,
+        paises: resp
       }
     }
   }
