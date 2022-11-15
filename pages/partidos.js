@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { SelectorWrapper } from '../components/SelectorWrapper';
-import { Grid, Button, Text } from "@nextui-org/react";
+import { Grid, Button, Text, Image } from "@nextui-org/react";
 import styles from '../styles/Partidos.module.scss';
 import { getPartidos } from '../services/partidosServices';
 import { getGrupos } from '../services/gruposServices';
 import { getEquipos } from '../services/equiposServices';
 
 
-function Partidos({ partidos, grupdia, paises }) {
+function Partidos({ partidos, grupos, paises }) {
+
   const [partidosToShow, setPartidosToShow] = useState(partidos)
 
   const handlePartidos = () => {
@@ -15,7 +16,7 @@ function Partidos({ partidos, grupdia, paises }) {
   }
 
   // const handleGrupos = () => {
-  //   setPartidosToShow(grupdia);
+  //   setPartidosToShow(grupos);
   // }
 
   const handleFilterGroup = (e) => {
@@ -24,46 +25,46 @@ function Partidos({ partidos, grupdia, paises }) {
     let partidosFilterGroup = []
         
       if(value === 'All'){
-        setPartidosToShow(grupdia);
+        setPartidosToShow(grupos);
       }
   
       if(value === 'A'){
-        partidosFilterGroup = grupdia.filter(elem => elem.attributes.grupo === 'A')
+        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'A')
         setPartidosToShow(partidosFilterGroup)
       }
   
       if(value === 'B'){
-        partidosFilterGroup = grupdia.filter(elem => elem.attributes.grupo === 'B')
+        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'B')
         setPartidosToShow(partidosFilterGroup)
       }
       
       if(value === 'C'){
-        partidosFilterGroup = grupdia.filter(elem => elem.attributes.grupo === 'C')
+        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'C')
         setPartidosToShow(partidosFilterGroup)
       }
 
       if(value === 'D'){
-        partidosFilterGroup = grupdia.filter(elem => elem.attributes.grupo === 'D')
+        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'D')
         setPartidosToShow(partidosFilterGroup)
       }
 
       if(value === 'E'){
-        partidosFilterGroup = grupdia.filter(elem => elem.attributes.grupo === 'E')
+        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'E')
         setPartidosToShow(partidosFilterGroup)
       }
 
       if(value === 'F'){
-        partidosFilterGroup = grupdia.filter(elem => elem.attributes.grupo === 'F')
+        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'F')
         setPartidosToShow(partidosFilterGroup)
       }
 
       if(value === 'G'){
-        partidosFilterGroup = grupdia.filter(elem => elem.attributes.grupo === 'G')
+        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'G')
         setPartidosToShow(partidosFilterGroup)
       }
      
       if(value === 'H'){
-        partidosFilterGroup = grupdia.filter(elem => elem.attributes.grupo === 'H')
+        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'H')
         setPartidosToShow(partidosFilterGroup)
       }
 
@@ -147,14 +148,15 @@ function Partidos({ partidos, grupdia, paises }) {
                           <span>{partido.attributes.horario}</span>  
                       <div className={styles.match}>
                         <div className={styles.match_team}>
-                            <img src={partido.attributes.flag_a} ></img>
+                            <img src={partido.attributes.flag_a} />
+                            
                             {(partido.attributes.equipo_a).slice(0, 3)}
                             
                         </div>
 
                         <div className={styles.match_team}>
                             {(partido.attributes.equipo_b).slice(0, 3)}
-                            <img src={partido.attributes.flag_b} ></img>
+                            <img src={partido.attributes.flag_b} />
                         </div>
                     </div>
                         <span>Grupo: {partido.attributes.grupo}</span>
@@ -193,9 +195,9 @@ export async function getStaticProps() {
     return {
       props: {
         partidos: res,
-        grupdia: response,
+        grupos: response,
         paises: resp
       }
     }
-  }
+}
   

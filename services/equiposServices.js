@@ -1,5 +1,7 @@
+import { server } from '../config';
+
 export async function getEquipos() {
-    const resp = await fetch("http://localhost:3000/api/equipos");
+    const resp = await fetch(`${server}/api/equipos`);
     const equipo = await resp.json();
     const equipos = equipo.data;
     return equipos;

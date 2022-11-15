@@ -1,5 +1,7 @@
+import { server } from '../config';
+
 export async function getGrupos() {
-    const response = await fetch("http://localhost:3000/api/grupos");
+    const response = await fetch(`${server}/api/grupos`);
     const grupo = await response.json();
     const grupos = grupo.data;
     return grupos;
