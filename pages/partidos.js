@@ -146,7 +146,7 @@ function Partidos({ partidos, grupos, paises }) {
                     <div className={styles.fecha}>
                           <span>{(partido.attributes.dia).split(/[-/]/).reverse().join("-")}</span>
                           <span>{partido.attributes.horario}</span>  
-                      <div className={styles.match}>
+                      {/* <div className={styles.match}>
                         <div className={styles.match_team}>
                             <img src={partido.attributes.flag_a} />
                             
@@ -157,6 +157,18 @@ function Partidos({ partidos, grupos, paises }) {
                         <div className={styles.match_team}>
                             {(partido.attributes.equipo_b).slice(0, 3)}
                             <img src={partido.attributes.flag_b} />
+                        </div>
+                    </div> */}
+                    <div className={styles.match}>
+
+                        <div className={styles.match_team}>
+                            <Image src={partido.attributes.flag_a} width="38px" height="28px" alt={(partido.attributes.equipo_a).slice(0, 3)} />
+                            <span>{(partido.attributes.equipo_a).slice(0, 3)}</span>    
+                        </div>
+
+                        <div className={styles.match_team}>
+                            <span>{(partido.attributes.equipo_b).slice(0, 3)}</span>
+                            <Image src={partido.attributes.flag_b} width="38px" height="28px" alt={(partido.attributes.equipo_b).slice(0, 3)}/>
                         </div>
                     </div>
                         <span>Grupo: {partido.attributes.grupo}</span>
