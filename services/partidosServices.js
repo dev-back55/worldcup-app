@@ -1,5 +1,7 @@
+import { server } from '../config';
+
 export async function getPartidos() {
-    const res = await fetch("http://localhost:3000/api/partidos");
+    const res = await fetch(`${server}/api/partidos`);
     const data = await res.json();
     const datas = data.data;
     return datas;
