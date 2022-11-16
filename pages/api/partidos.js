@@ -7,8 +7,8 @@ export default function handler(req, res) {
 }
 
 // export async function getServerSideProps() {
-//   const { API_URL } = process.env
-//   const res = fetch(`${API_URL}/api/partidos`)
+//   const { NEXT_PUBLIC_API_URL } = process.env
+//   const res = fetch(`${NEXT_PUBLIC_API_URL}/api/partidos`)
 //   const data = await res.json()
 
 //   return {

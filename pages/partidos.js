@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { SelectorWrapper } from '../components/SelectorWrapper';
+//import { SelectorWrapper } from '../components/SelectorWrapper';
 import { Grid, Button, Text, Image } from "@nextui-org/react";
 import styles from '../styles/Partidos.module.scss';
-import { getPartidos } from '../services/partidosServices';
-import { getGrupos } from '../services/gruposServices';
-import { getEquipos } from '../services/equiposServices';
+//import { getPartidos } from '../services/partidosServices';
+//import { getGrupos } from '../services/gruposServices';
+//import { getEquipos } from '../services/equiposServices';
 
 
 function Partidos({ partidos, grupos, paises }) {
@@ -29,42 +29,42 @@ function Partidos({ partidos, grupos, paises }) {
       }
   
       if(value === 'A'){
-        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'A')
+        partidosFilterGroup = grupos.filter(elem => elem.grupo === 'A')
         setPartidosToShow(partidosFilterGroup)
       }
   
       if(value === 'B'){
-        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'B')
+        partidosFilterGroup = grupos.filter(elem => elem.grupo === 'B')
         setPartidosToShow(partidosFilterGroup)
       }
       
       if(value === 'C'){
-        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'C')
+        partidosFilterGroup = grupos.filter(elem => elem.grupo === 'C')
         setPartidosToShow(partidosFilterGroup)
       }
 
       if(value === 'D'){
-        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'D')
+        partidosFilterGroup = grupos.filter(elem => elem.grupo === 'D')
         setPartidosToShow(partidosFilterGroup)
       }
 
       if(value === 'E'){
-        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'E')
+        partidosFilterGroup = grupos.filter(elem => elem.grupo === 'E')
         setPartidosToShow(partidosFilterGroup)
       }
 
       if(value === 'F'){
-        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'F')
+        partidosFilterGroup = grupos.filter(elem => elem.grupo === 'F')
         setPartidosToShow(partidosFilterGroup)
       }
 
       if(value === 'G'){
-        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'G')
+        partidosFilterGroup = grupos.filter(elem => elem.grupo === 'G')
         setPartidosToShow(partidosFilterGroup)
       }
      
       if(value === 'H'){
-        partidosFilterGroup = grupos.filter(elem => elem.attributes.grupo === 'H')
+        partidosFilterGroup = grupos.filter(elem => elem.grupo === 'H')
         setPartidosToShow(partidosFilterGroup)
       }
 
@@ -76,7 +76,7 @@ function Partidos({ partidos, grupos, paises }) {
     const value = e.target.value
     let partidosFilterGroup = []
     
-    partidosFilterGroup = partidos.filter(elem => elem.attributes.equipo_a === value || elem.attributes.equipo_b === value)
+    partidosFilterGroup = partidos.filter(elem => elem.equipo_a === value || elem.equipo_b === value)
     setPartidosToShow(partidosFilterGroup)
     
   }
@@ -127,7 +127,7 @@ function Partidos({ partidos, grupos, paises }) {
                                 <select onClick={e => handleFilterPais(e)}>
                                 {
                                     paises.sort().map(pais =>(
-                                        <option value={pais.attributes.name} key={pais.attributes.name}>{pais.attributes.name}</option>
+                                        <option value={pais.name} key={pais.name}>{pais.name}</option>
                                         ))
                                 }
                                 </select>
@@ -144,34 +144,34 @@ function Partidos({ partidos, grupos, paises }) {
             return (
                 <div className={styles.matches} key={partido.id}>
                     <div className={styles.fecha}>
-                          <span>{(partido.attributes.dia).split(/[-/]/).reverse().join("-")}</span>
-                          <span>{partido.attributes.horario}</span>  
+                          <span>{(partido.dia).split(/[-/]/).reverse().join("-")}</span>
+                          <span>{partido.horario}</span>  
                       {/* <div className={styles.match}>
                         <div className={styles.match_team}>
-                            <img src={partido.attributes.flag_a} />
+                            <img src={partido.flag_a} />
                             
-                            {(partido.attributes.equipo_a).slice(0, 3)}
+                            {(partido.equipo_a).slice(0, 3)}
                             
                         </div>
 
                         <div className={styles.match_team}>
-                            {(partido.attributes.equipo_b).slice(0, 3)}
-                            <img src={partido.attributes.flag_b} />
+                            {(partido.equipo_b).slice(0, 3)}
+                            <img src={partido.flag_b} />
                         </div>
                     </div> */}
                     <div className={styles.match}>
 
                         <div className={styles.match_team}>
-                            <Image src={partido.attributes.flag_a} width="38px" height="28px" alt={(partido.attributes.equipo_a).slice(0, 3)} />
-                            <span>{(partido.attributes.equipo_a).slice(0, 3)}</span>    
+                            <Image src={partido.flag_a} width="38px" height="28px" alt={(partido.equipo_a).slice(0, 3)} />
+                            <span>{(partido.equipo_a).slice(0, 3)}</span>    
                         </div>
 
                         <div className={styles.match_team}>
-                            <span>{(partido.attributes.equipo_b).slice(0, 3)}</span>
-                            <Image src={partido.attributes.flag_b} width="38px" height="28px" alt={(partido.attributes.equipo_b).slice(0, 3)}/>
+                            <span>{(partido.equipo_b).slice(0, 3)}</span>
+                            <Image src={partido.flag_b} width="38px" height="28px" alt={(partido.equipo_b).slice(0, 3)}/>
                         </div>
                     </div>
-                        <span>Grupo: {partido.attributes.grupo}</span>
+                        <span>Grupo: {partido.grupo}</span>
                     </div>
                 </div>
             )
@@ -187,28 +187,25 @@ function Partidos({ partidos, grupos, paises }) {
 export default Partidos;
 
 export async function getStaticProps() {
-    // const { API_URL } = process.env
-    // const res = await fetch(`${API_URL}/api/partidos?pagination[pageSize]=50&sort[0]=dia`);
-    // const data = await res.json();
-    // const datas = data.data
-    const res = await getPartidos();
-
-
-    // const response = await fetch(`${API_URL}/api/partidos?pagination[pageSize]=50&sort[0]=grupo&sort[1]=dia`);
-    // const grupo = await response.json();
+    const { NEXT_PUBLIC_API_URL } = process.env
+    const res = await fetch(`${NEXT_PUBLIC_API_URL}/partidos`);
+    const data = await res.json();
+    
+    const response = await fetch(`${NEXT_PUBLIC_API_URL}/grupos`);
+     const grupo = await response.json();
     // const grupos = grupo.data
-    const response = await getGrupos();
+    //const response = await getGrupos();
 
-    // const resp = await fetch(`${API_URL}/api/equipos?pagination[pageSize]=50&sort[0]=name`);
-    // const equipo = await resp.json();
+    const resp = await fetch(`${NEXT_PUBLIC_API_URL}/equipos`);
+    const equipo = await resp.json();
     // const equipos = equipo.data
-    const resp = await getEquipos();
+    //const resp = await getEquipos();
 
     return {
       props: {
-        partidos: res,
-        grupos: response,
-        paises: resp
+        partidos: data,
+        grupos: grupo,
+        paises: equipo
       }
     }
 }
