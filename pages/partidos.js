@@ -186,7 +186,7 @@ function Partidos({ partidos, grupos, paises }) {
   
 export default Partidos;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const { NEXT_PUBLIC_API_URL } = process.env
     const res = await fetch(`${NEXT_PUBLIC_API_URL}/partidos`);
     const data = await res.json();
