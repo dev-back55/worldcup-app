@@ -1,13 +1,19 @@
+import { useState } from 'react'
 import styles from '../styles/Home.module.scss';
 import { Text, Card } from "@nextui-org/react";
 
 
 export default function Home() {
+  const [ dias, setDias ] = useState(0)
+  const [ horas, setHoras ] = useState(0)
+  const [ minutos, setMinutos ] = useState(0)
+  const [ segundos, setSegundos ] = useState(0)
+
   const second = 1000
   const minute = second * 60
   const hour = minute * 60
   const day = hour * 24
-  
+    
   const kickOffWorldCupDate = new Date('2022-11-20 13:00:00')
   
   function zeroLeft (number) {
@@ -19,9 +25,9 @@ export default function Home() {
       return kickOffWorldCupDate.getTime() - currentDate
   }
   
-  function setCountDown (element, value) {
-      document.querySelector(`.${element}`).innerHTML = value
-  }
+  // function setCountDown (element, value) {
+  //     document.querySelector(`.${element}`).innerHTML = value
+  // }
   
   function diffDay (diff) {
       return Math.floor(diff / day)
@@ -46,10 +52,15 @@ export default function Home() {
     
       const diff = diffKickOffDateWorldCup()
   
-      setCountDown('days', diffDay(diff))
-      setCountDown('hours', diffHour(diff))
-      setCountDown('minutes', diffMinute(diff))
-      setCountDown('seconds', diffSecond(diff))
+      // setCountDown('days', diffDay(diff))
+      // setCountDown('hours', diffHour(diff))
+      // setCountDown('minutes', diffMinute(diff))
+      // setCountDown('seconds', diffSecond(diff))
+
+      setDias(diffDay(diff));
+      setHoras(diffHour(diff));
+      setMinutos(diffMinute(diff));
+      setSegundos(diffSecond(diff));
   }
 
   function comienza () {
@@ -90,10 +101,10 @@ export default function Home() {
 
         <div className={styles.container_countdown}>
             <ul className={styles.count_down}>
-                <li className="days"></li>
-                <li className="hours"></li>
-                <li className="minutes"></li>
-                <li className="seconds"></li>
+                <li className="days">{dias}</li>
+                <li className="hours">{horas}</li>
+                <li className="minutes">{minutos}</li>
+                <li className="seconds">{segundos}</li>
             </ul>
             <div className={styles.container_countdown_fechas}>
                 <Text size="$xs" css={{
