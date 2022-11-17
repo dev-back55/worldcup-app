@@ -1,7 +1,8 @@
 import { useState } from 'react';
 //import { SelectorWrapper } from '../components/SelectorWrapper';
-import { Grid, Button, Text, Image } from "@nextui-org/react";
+import { Grid, Button, Text } from "@nextui-org/react";
 import styles from '../styles/Partidos.module.scss';
+import Image from 'next/image'
 //import { getPartidos } from '../services/partidosServices';
 //import { getGrupos } from '../services/gruposServices';
 //import { getEquipos } from '../services/equiposServices';
