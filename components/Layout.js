@@ -31,7 +31,7 @@ const Layout = ({children}) => {
           <span className={styles.logo}>
             <Image src="/img/developer.png" color="#ffffff" alt="Horacio Abitú" width={35} height={35} />
           </span>
-          Horacio Abitú  -  2022
+          Horacio Abitú  - Copyright © 2022
         </a>
       </footer>
   </Box>
