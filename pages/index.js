@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from '../styles/Home.module.scss';
-import { Text, Card } from "@nextui-org/react";
+import { Text } from "@nextui-org/react";
 
 
 export default function Home() {
