@@ -125,7 +125,7 @@ function Partidos({ partidos, grupos, paises }) {
                         <div className={styles.divpais}>
                           <Text h6 color="primary">País :</Text>
                             <div className={styles.content_select_pais}>
-                                <select onClick={e => handleFilterPais(e)}>
+                                <select onChange={e => handleFilterPais(e)}>
                                 {
                                     paises.sort().map(pais =>(
                                         <option value={pais.name} key={pais.name}>{pais.name}</option>
