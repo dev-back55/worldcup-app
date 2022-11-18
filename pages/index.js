@@ -107,13 +107,8 @@ export default function Home() {
                 <li className="seconds">{segundos}</li>
             </ul>
             <div className={styles.container_countdown_fechas}>
-                <Text size="$xs" css={{
-                  pl: "$10", pr: "$1"
-                }}>días</Text>
-                <Text size="$xs"
-                css={{
-                  pl: "$8",
-                }}>horas</Text>
+                <Text size="$xs" >días</Text>
+                <Text size="$xs" >horas</Text>
                 <Text size="$xs">minutos</Text>
                 <Text size="$xs">segundos</Text>
             </div>        

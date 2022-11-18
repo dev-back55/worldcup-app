@@ -209,10 +209,12 @@
 .container_countdown_fechas {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 2rem;
   font-size: 0.55rem;
   justify-content: center;
-  margin-top: -30px;
+  margin-top: -20px;
+  margin-left: 1rem;
+  padding-left: 0.5rem;
 }
 
 .container_title {
