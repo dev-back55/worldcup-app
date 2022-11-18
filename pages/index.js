@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from '../styles/Home.module.scss';
-import { Text } from "@nextui-org/react";
+import { Text, Grid } from "@nextui-org/react";
 
 
 export default function Home() {
@@ -106,12 +106,27 @@ export default function Home() {
                 <li className="minutes">{minutos}</li>
                 <li className="seconds">{segundos}</li>
             </ul>
-            <div className={styles.container_countdown_fechas}>
+            {/* <div className={styles.container_countdown_fechas}>
                 <Text size="$xs" >días</Text>
                 <Text size="$xs" >horas</Text>
                 <Text size="$xs">minutos</Text>
                 <Text size="$xs">segundos</Text>
-            </div>        
+            </div> */}
+            <Grid.Container gap={0.5} display="inline-block" justify="space-around" css={{mt:"-1.5rem"}}>
+              <Grid xs={2}>
+                <Text size="$xs" css={{ ml: "0.8rem" }}>dias</Text>
+              </Grid>
+              <Grid xs={2}>
+                <Text size="$xs" css={{ ml: "0.7rem" }}>horas</Text>
+              </Grid>
+              <Grid xs={2}>
+                <Text size="$xs">minutos</Text>
+              </Grid>
+              <Grid xs={2}>
+                <Text size="$xs">segundos</Text>
+              </Grid>
+            </Grid.Container>
+
         </div>
       </main>
 
