@@ -1,5 +1,6 @@
-import { Navbar, Button, Link, Text, Avatar, Dropdown, Card, Spacer, Radio, useTheme, Image } from "@nextui-org/react";
+import { Link, Navbar, Button, Text, Avatar, Dropdown, Card, Spacer, Radio, useTheme, Image } from "@nextui-org/react";
 import { useSession, signIn, signOut } from "next-auth/react";
+
 
 
 const Header = () => {
@@ -60,9 +61,81 @@ const Header = () => {
         </Navbar.Content>
 
         <Navbar.Content>
-          {/* <Navbar.Link color="inherit" href="#">
-            Login
+          {/* <Navbar.Link color="inherit" href="/canaltv">
+            TV Online
           </Navbar.Link> */}
+
+          <Dropdown isBordered>
+            <Navbar.Item>
+              <Dropdown.Button
+                auto
+                light
+                css={{
+                  px: 0,
+                  dflex: "center",
+                  svg: { pe: "none" },
+                  fontSize: {xs: "0.6rem", sm: "0.8rem" }
+                }}
+                
+                ripple={false}
+              >
+                TV Online
+              </Dropdown.Button>
+            </Navbar.Item>
+            <Dropdown.Menu
+              aria-label="ACME features"
+              css={{
+                $$dropdownMenuWidth: "340px",
+                $$dropdownItemHeight: "70px",
+                "& .nextui-dropdown-item": {
+                  py: "$4",
+                  // dropdown item left icon
+                  svg: {
+                    color: "$secondary",
+                    mr: "$4",
+                  },
+                  // dropdown item title
+                  "& .nextui-dropdown-item-content": {
+                    w: "100%",
+                    fontWeight: "$semibold",
+                  },
+                },
+              }}
+            >
+              
+              <Dropdown.Item
+                key="autoscaling"
+                showFullDescription
+                description="Podes ver los partidos desde su web. Acá abrimos una ventana en la app."
+  
+              >
+                <Link href="/canaltv">
+                  TV Pública
+                </Link>
+                
+              </Dropdown.Item>
+              <Dropdown.Item
+                key="usage_metrics"
+                showFullDescription
+                description="Abre nueva pestaña e ingresas con usuario y contraseña del servicio que dispongas - Flow/DirecTV/TeleCentro."
+                
+                >
+                  <Link href="https://play.tycsports.com/vivo.html" isExternal target="_blank">TyC Sports Play</Link>
+                
+              </Dropdown.Item>
+              <Dropdown.Item
+                key="production_ready"
+                showFullDescription
+                description="Abre nueva pestaña e ingresas con usuario y contraseña del servicio DirecTV."
+                
+              >
+                <Link href="https://www.directvgo.com/ar/iniciar-sesion" isExternal target="_blank">DTV GO</Link>
+                
+              </Dropdown.Item>
+              
+            </Dropdown.Menu>
+          </Dropdown>
+
           <Navbar.Item>
           <Avatar
                   bordered
