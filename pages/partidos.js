@@ -147,7 +147,7 @@ function Partidos({ partidos, grupos, paises }) {
                     <div className={styles.fecha}>
                           <span>{(partido.dia).split(/[-/]/).reverse().join("-")}</span>
                           <span>{partido.horario}</span>
-                          <span>{partido.canaltv}</span>  
+                          <span style={{color: "#0070f3"}}>{partido.canaltv}</span>  
                       {/* <div className={styles.match}>
                         <div className={styles.match_team}>
                             <img src={partido.flag_a} />
@@ -161,18 +161,18 @@ function Partidos({ partidos, grupos, paises }) {
                             <img src={partido.flag_b} />
                         </div>
                     </div> */}
-                    <div className={styles.match}>
+                        <div className={styles.match}>
 
-                        <div className={styles.match_team}>
-                            <Image src={partido.flag_a} width="38px" height="28px" alt={(partido.equipo_a).slice(0, 3)} />
-                            <span>{(partido.equipo_a).slice(0, 3)}</span>    
-                        </div>
+                            <div className={styles.match_team}>
+                                <Image src={partido.flag_a} width="38px" height="28px" alt={(partido.equipo_a).slice(0, 3)} />
+                                <span>{(partido.equipo_a).slice(0, 3)}</span>    
+                            </div>
 
-                        <div className={styles.match_team}>
-                            <span>{(partido.equipo_b).slice(0, 3)}</span>
-                            <Image src={partido.flag_b} width="38px" height="28px" alt={(partido.equipo_b).slice(0, 3)}/>
+                            <div className={styles.match_team}>
+                                <span>{(partido.equipo_b).slice(0, 3)}</span>
+                                <Image src={partido.flag_b} width="38px" height="28px" alt={(partido.equipo_b).slice(0, 3)}/>
+                            </div>
                         </div>
-                    </div>
                         <span>Grupo: {partido.grupo}</span>
                     </div>
                 </div>
