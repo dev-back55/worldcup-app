@@ -60,7 +60,17 @@ const Header = () => {
           <Navbar.Link href="#">Final</Navbar.Link>
         </Navbar.Content>
 
-        <Navbar.Content>
+        <Navbar.Content  css={{
+                  px: 0,
+                  dflex: "center",
+                  svg: { pe: "none" },
+                  "@xs": {
+                      fontSize: "0.75rem"},
+                  "@sm": {
+                      fontSize: "0.875rem"},
+                  "@md": {
+                        fontSize: "1rem"},    
+                }}>
           {/* <Navbar.Link color="inherit" href="/canaltv">
             TV Online
           </Navbar.Link> */}
@@ -69,12 +79,11 @@ const Header = () => {
             <Navbar.Item>
               <Dropdown.Button
                 auto
-                light
+                flat
                 css={{
                   px: 0,
                   dflex: "center",
                   svg: { pe: "none" },
-                  fontSize: {xs: "0.6rem", sm: "0.8rem" }
                 }}
                 
                 ripple={false}
