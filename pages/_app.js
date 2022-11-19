@@ -2,8 +2,6 @@ import { SessionProvider } from "next-auth/react"
 import Layout from '../components/Layout';
 import { createTheme, NextUIProvider } from '@nextui-org/react';
 import { darkTheme } from '../theme';
-//import '../styles/globals.scss';
-
 
 // const darkTheme = createTheme({
 //   type: 'dark',
@@ -18,11 +16,15 @@ import { darkTheme } from '../theme';
 // })
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+
   return (
     <SessionProvider session={session}>
     <NextUIProvider theme={ darkTheme }>
       <Layout>
-        <Component {...pageProps} />
+        
+          <Component {...pageProps} />
+        
+        
       </Layout>
     </NextUIProvider>  
     </SessionProvider>
