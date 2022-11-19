@@ -84,7 +84,7 @@ function Partidos({ partidos, grupos, paises }) {
   
   return (
     <>
-       
+      
       <div className={styles.group}>
           
           <Text className={styles.group_title}
@@ -146,7 +146,8 @@ function Partidos({ partidos, grupos, paises }) {
                 <div className={styles.matches} key={partido.id}>
                     <div className={styles.fecha}>
                           <span>{(partido.dia).split(/[-/]/).reverse().join("-")}</span>
-                          <span>{partido.horario}</span>  
+                          <span>{partido.horario}</span>
+                          <span>{partido.canaltv}</span>  
                       {/* <div className={styles.match}>
                         <div className={styles.match_team}>
                             <img src={partido.flag_a} />
@@ -180,8 +181,8 @@ function Partidos({ partidos, grupos, paises }) {
           )
         }
       </div>  
-
-     </>
+      
+    </>
     )
 }
   
