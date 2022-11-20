@@ -14,7 +14,7 @@ export default function Home() {
   const hour = minute * 60
   const day = hour * 24
     
-  const kickOffWorldCupDate = new Date('2022-11-20 13:00:00')
+  const kickOffWorldCupDate = new Date('2022-12-18 12:00:00')
   
   function zeroLeft (number) {
       return String(number).padStart(2, '0')
@@ -95,7 +95,7 @@ export default function Home() {
                   paddingLeft: "1rem"
                 }}
                 weight="bold">
-                  el Mundial comienza en
+                  la final del Mundial se juega en
             </Text>
         </div>
 
