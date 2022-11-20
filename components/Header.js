@@ -115,10 +115,10 @@ const Header = () => {
               <Dropdown.Item
                 key="autoscaling"
                 showFullDescription
-                description="Podes ver los partidos desde su web. Acá abrimos una ventana en la app."
+                description="Podes ver los partidos desde su web. Abre nueva pestaña."
   
               >
-                <Link href="/canaltv">
+                <Link href="https://www.tvpublica.com.ar/" isExternal target="_blank">
                   TV Pública
                 </Link>
                 

@@ -17,10 +17,10 @@ const Layout = ({children}) => {
         <link rel="icon" href="/img/soccer2.ico" />
      </Head>
 
-     <Header />
+    <Header />
 
     {children}
-    
+
     <footer className={styles.footer}>
         <a
           href="https://horacio-abitu.vercel.app/"
