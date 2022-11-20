@@ -156,10 +156,10 @@ const Header = () => {
           </Navbar.Item>
           <Navbar.Item>
           { !session ? 
-            <Button auto flat as={Link} color={"primary"} href="#" >
+            <Button auto flat color={"primary"} onClick={() => signIn()}>
                Login
             </Button>
-          : <Button auto flat onClick={() => signOut()}>Logout</Button>
+          : <Button auto flat color={"primary"} onClick={() => signOut()}>Logout</Button>
           }
             
           </Navbar.Item>
