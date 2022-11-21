@@ -146,6 +146,15 @@ const Header = () => {
                 <Link href="https://www.directvgo.com/ar/iniciar-sesion" isExternal target="_blank">DTV GO</Link>
                 
               </Dropdown.Item>
+              <Dropdown.Item
+                key="production_ready"
+                showFullDescription
+                description="La Secta Deportiva, canal de youtube partidos online."
+                
+                >
+                <Link href="https://www.youtube.com/channel/UCBPasXWxj1DYJLqZktw_UWg" isExternal target="_blank">Secta Deportiva</Link>
+                
+              </Dropdown.Item>
               
             </Dropdown.Menu>
           </Dropdown>
