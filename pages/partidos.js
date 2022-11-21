@@ -192,7 +192,7 @@ function Partidos({ partidos, grupos, paises }) {
                     {partido.resumen_url ?
                     <div>
                     <Link href={partido.resumen_url} isExternal target="_blank">
-                        <Button size="xs" color="gradient" onClick={handler} icon={<PlayIcon />}>
+                        <Button size="xs" color="gradient" onClick={handler} iconRight={<PlayIcon />}>
                           Play
                         </Button>
                     </Link>    
