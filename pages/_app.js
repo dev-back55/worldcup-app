@@ -1,25 +1,23 @@
 import { SessionProvider } from "next-auth/react"
 import Layout from '../components/Layout';
 import { createTheme, NextUIProvider } from '@nextui-org/react';
-import { darkTheme } from '../theme';
-
-// const darkTheme = createTheme({
-//   type: 'dark',
-//   className: 'dark-modern',
-//   theme: {
-//     colors: {
-//       primary: '#7928CA',
-//       primaryLight: '#582A87',
-//       success: '#FF1CF7'
-//     }
-//   }
-// })
+import { darkTheme, lightTheme } from '../theme';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+  
 
   return (
     <SessionProvider session={session}>
-    <NextUIProvider theme={ darkTheme }>
+    <NextThemesProvider
+    defaultTheme="system"
+    attribute="class"
+    value={{
+      light: lightTheme.className,
+      dark: darkTheme.className
+    }}
+    >  
+    <NextUIProvider>
       <Layout>
         
           <Component {...pageProps} />
@@ -27,6 +25,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         
       </Layout>
     </NextUIProvider>  
+    </NextThemesProvider>
     </SessionProvider>
   );
 }
