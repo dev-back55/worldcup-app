@@ -1,8 +1,9 @@
 import { useState } from 'react';
 //import { SelectorWrapper } from '../components/SelectorWrapper';
-import { Grid, Button, Text } from "@nextui-org/react";
+import {  Grid, Button, Text, Link } from "@nextui-org/react";
 import styles from '../styles/Partidos.module.scss';
 import Image from 'next/image'
+import { PlayIcon } from '../theme';
 //import { getPartidos } from '../services/partidosServices';
 //import { getGrupos } from '../services/gruposServices';
 //import { getEquipos } from '../services/equiposServices';
@@ -81,6 +82,13 @@ function Partidos({ partidos, grupos, paises }) {
     setPartidosToShow(partidosFilterGroup)
     
   }
+
+  const [visible, setVisible] = useState(false);
+  const handler = () => setVisible(true);
+  const closeHandler = () => {
+    setVisible(false);
+    console.log("closed");
+  };
   
   return (
     <>
@@ -180,6 +188,17 @@ function Partidos({ partidos, grupos, paises }) {
                         </div>
                         <span>Grupo: {partido.grupo}</span>
                     </div>
+
+                    {partido.resumen_url ?
+                    <div>
+                    <Link href={partido.resumen_url} isExternal target="_blank">
+                        <Button size="xs" color="gradient" onClick={handler} icon={<PlayIcon />}>
+                          Play
+                        </Button>
+                    </Link>    
+                    </div>
+                    : null  
+                    }
                 </div>
             )
           }
