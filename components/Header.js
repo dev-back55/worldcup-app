@@ -1,11 +1,16 @@
-import { Link, Navbar, Button, Text, Avatar, Dropdown, Card, Spacer, Radio, useTheme, Image } from "@nextui-org/react";
+import { Link, Navbar, Button, Text, Avatar, Dropdown, Image } from "@nextui-org/react";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { Switch, useTheme } from '@nextui-org/react'
+import { useTheme as useNextTheme } from 'next-themes'
+import { MoonIcon, SunIcon } from "../theme";
 
 
 
 const Header = () => {
   const { data: session } = useSession();
-    const {isDark} = useTheme();
+  //const {isDark} = useTheme();
+  const { setTheme } = useNextTheme();
+  const { isDark, type } = useTheme();
 
     const collapseItems = [
       "Fase Grupos",
@@ -21,6 +26,7 @@ const Header = () => {
     <Navbar isBordered={isDark} variant="floating">
       <Navbar.Toggle showIn="sm" />
         <Navbar.Brand
+          hideIn="sm"
            css={{
             "@xs": {
               w: "12%",
@@ -60,7 +66,7 @@ const Header = () => {
           <Navbar.Link href="#">Final</Navbar.Link>
         </Navbar.Content>
 
-        <Navbar.Content  css={{
+        <Navbar.Content hideIn="sm" css={{
                   px: 0,
                   dflex: "center",
                   svg: { pe: "none" },
@@ -75,8 +81,8 @@ const Header = () => {
             TV Online
           </Navbar.Link> */}
 
-          <Dropdown isBordered>
             <Navbar.Item>
+          <Dropdown isBordered closeOnSelect="true">
               <Dropdown.Button
                 auto
                 flat
@@ -90,7 +96,6 @@ const Header = () => {
               >
                 TV Online
               </Dropdown.Button>
-            </Navbar.Item>
             <Dropdown.Menu
               aria-label="ACME features"
               css={{
@@ -110,14 +115,14 @@ const Header = () => {
                   },
                 },
               }}
-            >
+              >
               
               <Dropdown.Item
                 key="autoscaling"
                 showFullDescription
                 description="Podes ver los partidos desde su web. Abre nueva pestaña."
-  
-              >
+                
+                >
                 <Link href="https://www.tvpublica.com.ar/" isExternal target="_blank">
                   TV Pública
                 </Link>
@@ -137,13 +142,27 @@ const Header = () => {
                 showFullDescription
                 description="Abre nueva pestaña e ingresas con usuario y contraseña del servicio DirecTV."
                 
-              >
+                >
                 <Link href="https://www.directvgo.com/ar/iniciar-sesion" isExternal target="_blank">DTV GO</Link>
                 
               </Dropdown.Item>
               
             </Dropdown.Menu>
           </Dropdown>
+                </Navbar.Item>
+          </Navbar.Content>
+
+        <Navbar.Content  css={{
+                  px: 0,
+                  dflex: "center",
+                  svg: { pe: "none" },
+                  "@xs": {
+                      fontSize: "0.75rem"},
+                  "@sm": {
+                      fontSize: "0.875rem"},
+                  "@md": {
+                        fontSize: "1rem"},    
+                }}>
 
           <Navbar.Item>
           <Avatar
@@ -162,6 +181,15 @@ const Header = () => {
           : <Button auto flat color={"primary"} onClick={() => signOut()}>Logout</Button>
           }
             
+          </Navbar.Item>
+          <Navbar.Item>
+            <Switch
+              size={"@sm" ? "sm" : "xs"}            
+              iconOn={<SunIcon filled />}
+              iconOff={<MoonIcon filled />}
+              checked={isDark}
+              onChange={(e) => setTheme(e.target.checked ? 'dark' : 'light')}
+            />
           </Navbar.Item>
         </Navbar.Content>
         
