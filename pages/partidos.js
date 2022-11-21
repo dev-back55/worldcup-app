@@ -167,7 +167,12 @@ function Partidos({ partidos, grupos, paises }) {
                                 <Image src={partido.flag_a} width="38px" height="28px" alt={(partido.equipo_a).slice(0, 3)} />
                                 <span>{(partido.equipo_a).slice(0, 3)}</span>    
                             </div>
-
+                            <div>
+                              <span style={{color: "#17C964", fontWeight: "bold"}}>{partido.goles_a}</span>
+                            </div>
+                            <div>
+                              <span style={{color: "#17C964", fontWeight: "bold"}}>{partido.goles_b}</span>
+                            </div>
                             <div className={styles.match_team}>
                                 <span>{(partido.equipo_b).slice(0, 3)}</span>
                                 <Image src={partido.flag_b} width="38px" height="28px" alt={(partido.equipo_b).slice(0, 3)}/>
