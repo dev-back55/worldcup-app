@@ -134,10 +134,10 @@ export default function Home() {
             </Grid.Container>
 
         </div>
-        <Spacer y={20}></Spacer>
-        <Grid.Container justify="center" justify-content="center" alignItems="center" >
+        <Spacer y={17}></Spacer>
+        <Grid.Container justify="center" css={{ml:"5rem"}} >
         <>
-            <Text>Música</Text>
+            <Text color="#8A0063">Música</Text>
             <Spacer x={1}></Spacer>
             <Switch
               size={"@sm" ? "sm" : "xs"}           
