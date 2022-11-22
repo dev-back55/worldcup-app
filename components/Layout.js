@@ -22,6 +22,7 @@ const Layout = ({children}) => {
     {children}
 
     <footer className={styles.footer}>
+      <div>
         <a
           href="https://horacio-abitu.vercel.app/"
           target="_blank"
@@ -33,6 +34,13 @@ const Layout = ({children}) => {
           </span>
           Horacio Abitú  - Copyright © 2022
         </a>
+        </div>
+        <br/>
+        <div>
+          <span style={{color: "#9750DD", fontSize:"0.775rem"}}>
+            Música por: @eu-genius 🎧 - Qatar (World Cup Release)
+          </span>
+        </div>
       </footer>
   </Box>
   )
