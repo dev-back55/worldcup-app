@@ -18,6 +18,7 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
   flex: 1;
   padding: 2rem 0;
   justify-content: center;
@@ -30,6 +31,7 @@
   align-items: center;
   flex-grow: 1;
   font-size: 0.875rem;
+  color: #0070f3;
 }
 
 .title a {

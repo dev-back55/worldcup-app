@@ -3,7 +3,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { Switch, useTheme } from '@nextui-org/react'
 import { useTheme as useNextTheme } from 'next-themes'
 import { MoonIcon, SunIcon } from "../theme";
-
+import { useState } from "react";
 
 
 const Header = () => {
@@ -12,12 +12,14 @@ const Header = () => {
   const { setTheme } = useNextTheme();
   const { isDark, type } = useTheme();
 
+     
     const collapseItems = [
       "Fase Grupos",
       "Octavos",
       "Cuartos",
       "Semi",
       "Final",
+      "Music",
       "Home",
       "Logout",
     ];
@@ -59,6 +61,7 @@ const Header = () => {
                             }
                           },
                         }}>
+                         
           <Navbar.Link href="/partidos">Fase Grupos</Navbar.Link>
           <Navbar.Link href="#">Octavos</Navbar.Link>
           <Navbar.Link href="#">Cuartos</Navbar.Link>

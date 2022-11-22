@@ -1,9 +1,15 @@
 import { useState } from 'react'
 import styles from '../styles/Home.module.scss';
-import { Text, Grid } from "@nextui-org/react";
-
+import { Text, Grid, Container, Spacer, Switch } from "@nextui-org/react";
+import ReactHowler from 'react-howler';
+import { VolumeDown, VolumeUp, VolumeUpIcon } from '../theme';
 
 export default function Home() {
+  const [ soundOn, setsoundOn ] = useState(false);
+  const handleChange = (event) => {
+    setsoundOn(event.target.checked);
+  }
+
   const [ dias, setDias ] = useState(0)
   const [ horas, setHoras ] = useState(0)
   const [ minutos, setMinutos ] = useState(0)
@@ -128,8 +134,32 @@ export default function Home() {
             </Grid.Container>
 
         </div>
+        <Spacer y={20}></Spacer>
+        <Grid.Container justify="center" justify-content="center" alignItems="center" >
+        <>
+            <Text>Música</Text>
+            <Spacer x={1}></Spacer>
+            <Switch
+              size={"@sm" ? "sm" : "xs"}           
+              color="secondary"
+              // iconOn={<VolumeUp />}
+              // iconOff={<VolumeDown />}
+              icon={<VolumeUpIcon />}
+              checked={!!soundOn}
+              onChange={handleChange}
+            />
+            <ReactHowler
+                src='https://res.cloudinary.com/djdp4cavt/video/upload/v1669119331/Mundial/Qatar_World_Cup_Release_p060pg.mp3'
+                preload={true}
+                playing={soundOn}
+                // mute={soundOn}
+                loop={true}
+            />
+            </>
+        </Grid.Container>    
       </main>
 
+            
       
     </div>
     
