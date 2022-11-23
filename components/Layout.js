@@ -14,9 +14,10 @@ const Layout = ({children}) => {
     <Head>
         <title>World Cup App</title>
         <meta name="description" content="World Cup Qatar 2022 app Fixture Mundial de Futbol 2022 Qatar" />
+        <meta name="google-site-verification" content="JsF6x7jLj_uoOLKLvTvvQoYDvaFRqkVLSU6PKLQMBxU" />
         <link rel="icon" href="/img/soccer2.ico" />
      </Head>
-
+     
     <Header />
 
     {children}
