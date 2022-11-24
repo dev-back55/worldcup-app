@@ -102,6 +102,9 @@ function Partidos({ partidos, grupos, paises }) {
                textGradient: "45deg, $blue600 -5%, $red600 80%",
              }}
              weight="bold">Fase de Grupos</Text>
+             <Link href="/posiciones">
+             <Button size="sm">Posiciones</Button>
+             </Link>
           
                 <Grid.Container gap={2} justify="center">
                     <Grid>
