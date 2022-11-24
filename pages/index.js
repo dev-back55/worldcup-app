@@ -1,8 +1,13 @@
 import { useState } from 'react'
 import styles from '../styles/Home.module.scss';
-import { Text, Grid, Container, Spacer, Switch } from "@nextui-org/react";
+import { Text, Grid, Container, Spacer, Switch, Row } from "@nextui-org/react";
 import ReactHowler from 'react-howler';
 import { VolumeDown, VolumeUp, VolumeUpIcon } from '../theme';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
 
 export default function Home() {
   const [ soundOn, setsoundOn ] = useState(false);
@@ -135,19 +140,36 @@ export default function Home() {
 
         </div>
         <Spacer y={17}></Spacer>
-        <Grid.Container justify="center" css={{ml:"5rem"}} >
+        {/* <Grid.Container justifyContent="center" alignItems="center" css={{ml:"5rem"}} > */}
         <>
-            <Text color="#9750DD">Música</Text>
-            <Spacer x={1}></Spacer>
-            <Switch
-              size={"@sm" ? "sm" : "xs"}           
-              color="secondary"
-              // iconOn={<VolumeUp />}
-              // iconOff={<VolumeDown />}
-              icon={<VolumeUpIcon />}
-              checked={!!soundOn}
-              onChange={handleChange}
-            />
+            {/* <Grid xs={12} md={12}> */}
+                <Text color="#9750DD">Música</Text>
+                <Spacer x={1}></Spacer>
+                <Switch
+                  size={"@sm" ? "sm" : "xs"}           
+                  color="secondary"
+                  // iconOn={<VolumeUp />}
+                  // iconOff={<VolumeDown />}
+                  icon={<VolumeUpIcon />}
+                  checked={!!soundOn}
+                  onChange={handleChange}
+                />            
+            {/* </Grid> */}
+            {/* <Grid xs={12} md={12}>
+              <Swiper
+              spaceBetween={50}
+              slidesPerView={3}
+              onSlideChange={() => console.log('slide change')}
+              onSwiper={(swiper) => console.log(swiper)}
+              >
+              <SwiperSlide>Slide 1</SwiperSlide>
+              <SwiperSlide>Slide 2</SwiperSlide>
+              <SwiperSlide>Slide 3</SwiperSlide>
+              <SwiperSlide>Slide 4</SwiperSlide>
+              ...
+              </Swiper>  
+            </Grid> */}
+            
             <ReactHowler
                 src='https://res.cloudinary.com/djdp4cavt/video/upload/v1669119331/Mundial/Qatar_World_Cup_Release_p060pg.mp3'
                 preload={true}
@@ -156,10 +178,9 @@ export default function Home() {
                 loop={true}
             />
             </>
-        </Grid.Container>    
+        {/* </Grid.Container>     */}
       </main>
-
-            
+                
       
     </div>
     

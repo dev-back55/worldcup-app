@@ -191,7 +191,7 @@ const Header = () => {
                   as="button"
                   color={ session ? "success" : "warning"}
                   size="md"
-                  src={ session ? `${session.user.image}` : "/img/futbol.ico"}>
+                  src={ session ? `${session.user.image}` : "/img/ball-for-fifa-world-cup-2022-qatar-2.png"}>
           </Avatar>
           </Navbar.Item>
           <Navbar.Item>
