@@ -5,9 +5,11 @@ import ReactHowler from 'react-howler';
 import { VolumeDown, VolumeUp, VolumeUpIcon } from '../theme';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Thumbs } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css';
+import Image from 'next/image';
 
 export default function Home() {
   const [ soundOn, setsoundOn ] = useState(false);
@@ -117,12 +119,7 @@ export default function Home() {
                 <li className="minutes">{minutos}</li>
                 <li className="seconds">{segundos}</li>
             </ul>
-            {/* <div className={styles.container_countdown_fechas}>
-                <Text size="$xs" >días</Text>
-                <Text size="$xs" >horas</Text>
-                <Text size="$xs">minutos</Text>
-                <Text size="$xs">segundos</Text>
-            </div> */}
+            
             <Grid.Container gap={0.5} display="inline-block" justify="space-around" css={{mt:"-1.5rem"}}>
               <Grid xs={2}>
                 <Text size="$xs" css={{ ml: "0.8rem" }}>dias</Text>
@@ -140,10 +137,14 @@ export default function Home() {
 
         </div>
         <Spacer y={17}></Spacer>
-        {/* <Grid.Container justifyContent="center" alignItems="center" css={{ml:"5rem"}} > */}
-        <>
-            {/* <Grid xs={12} md={12}> */}
-                <Text color="#9750DD">Música</Text>
+        <Grid.Container justifyContent="center" alignItems="center" css={{ml:"5rem"}} >
+        
+            <Grid xs={1} md={4} />
+            <Grid xs={1} md={4}>
+                     
+            </Grid>
+            <Grid xs={10} md={4}>
+            <Text color="#9750DD">Música</Text>
                 <Spacer x={1}></Spacer>
                 <Switch
                   size={"@sm" ? "sm" : "xs"}           
@@ -153,22 +154,42 @@ export default function Home() {
                   icon={<VolumeUpIcon />}
                   checked={!!soundOn}
                   onChange={handleChange}
-                />            
-            {/* </Grid> */}
-            {/* <Grid xs={12} md={12}>
+                />      
+            </Grid>
+        </Grid.Container>
+        <Spacer y={1}></Spacer>
+        <Grid.Container justifyContent="center" alignItems="center">     
+            <Grid xs={12} md={6} />
+            <Grid xs={12} md={6}>
               <Swiper
               spaceBetween={50}
               slidesPerView={3}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={(swiper) => console.log(swiper)}
+              loop={true}
+              navigation={true}
+              autoplay={true}
+              // onSlideChange={() => console.log('slide change')}
+              // onSwiper={(swiper) => console.log(swiper)}
               >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              ...
+              <SwiperSlide>
+                <Image src="/img/imagen1.jpg" width="550px" height="350px" alt="image1"/>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image src="/img/imagen2.jpg" width="550px" height="350px" alt="image2"/>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image src="/img/imagen3.jpg" width="550px" height="350px" alt="image3"/>  
+              </SwiperSlide>
+              <SwiperSlide>
+              <Image src="/img/imagen4.jpg" width="550px" height="350px" alt="image4"/>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image src="/img/imagen5.png" width="550px" height="350px" alt="image5"/>
+              </SwiperSlide>
+              <SwiperSlide>
+              <Image src="/img/imagen6.webp" width="550px" height="350px" alt="image6"/>
+              </SwiperSlide>
               </Swiper>  
-            </Grid> */}
+            </Grid>
             
             <ReactHowler
                 src='https://res.cloudinary.com/djdp4cavt/video/upload/v1669119331/Mundial/Qatar_World_Cup_Release_p060pg.mp3'
@@ -177,8 +198,8 @@ export default function Home() {
                 // mute={soundOn}
                 loop={true}
             />
-            </>
-        {/* </Grid.Container>     */}
+            
+        </Grid.Container>    
       </main>
                 
       
