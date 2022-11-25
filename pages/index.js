@@ -156,8 +156,15 @@ export default function Home() {
                   onChange={handleChange}
                 />      
             </Grid>
+            <ReactHowler
+                src='https://res.cloudinary.com/djdp4cavt/video/upload/v1669119331/Mundial/Qatar_World_Cup_Release_p060pg.mp3'
+                preload={true}
+                playing={soundOn}
+                // mute={soundOn}
+                loop={true}
+            />
         </Grid.Container>
-        <Spacer y={1}></Spacer>
+        {/* <Spacer y={1}></Spacer>
         <Grid.Container justifyContent="center" alignItems="center">     
             <Grid xs={12} md={6} />
             <Grid xs={12} md={6}>
@@ -191,15 +198,9 @@ export default function Home() {
               </Swiper>  
             </Grid>
             
-            <ReactHowler
-                src='https://res.cloudinary.com/djdp4cavt/video/upload/v1669119331/Mundial/Qatar_World_Cup_Release_p060pg.mp3'
-                preload={true}
-                playing={soundOn}
-                // mute={soundOn}
-                loop={true}
-            />
             
-        </Grid.Container>    
+            
+        </Grid.Container>     */}
       </main>
                 
       
