@@ -2,17 +2,16 @@
 
 require('dotenv').config();
 
-// const withPWA = require("next-pwa");
-// withPWA({
+const withPWA = require("next-pwa")({
   
-//   pwa: {
-//     dest: "public",
-//     register: true,
-//     skipWaiting: true,
-//     disable: process.env.NODE_ENV === "development"
-//   },
-// }); 
-const nextConfig = {
+     dest: "public",
+     register: true,
+     skipWaiting: true,
+     disable: process.env.NODE_ENV === "development",
+     
+});
+
+const nextConfig = withPWA({
   reactStrictMode: true,
   swcMinify: true,
   env: {
@@ -21,6 +20,6 @@ const nextConfig = {
   images: {
     domains: ['www.worldometers.info', 't3.ftcdn.net', 't4.ftcdn.net'],
   },
-}
+});
 
 module.exports = nextConfig;
