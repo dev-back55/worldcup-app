@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import styles from '../styles/Home.module.scss';
-import { Text, Grid, Container, Spacer, Switch, Row } from "@nextui-org/react";
+import { Text, Grid, Container, Spacer, Switch, Row, Button, Modal } from "@nextui-org/react";
 import ReactHowler from 'react-howler';
 import { VolumeDown, VolumeUp, VolumeUpIcon } from '../theme';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Thumbs } from 'swiper';
+import { PlayIcon } from '../theme';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -16,6 +17,13 @@ export default function Home() {
   const handleChange = (event) => {
     setsoundOn(event.target.checked);
   }
+
+  const [visible, setVisible] = useState(false);
+  const handler = () => setVisible(true);
+  const closeHandler = () => {
+    setVisible(false);
+    console.log("closed");
+  };
 
   const [ dias, setDias ] = useState(0)
   const [ horas, setHoras ] = useState(0)
@@ -137,13 +145,36 @@ export default function Home() {
 
         </div>
         <Spacer y={17}></Spacer>
-        <Grid.Container justifyContent="center" alignItems="center" css={{ml:"5rem"}} >
+        <Grid.Container justifyContent="center" alignItems="center" css={{ml:"5rem"}}>
         
-            <Grid xs={1} md={4} />
-            <Grid xs={1} md={4}>
-                     
+            <Grid xs={1} md={6} />
+            <Grid xs={5} md={3}>
+            <Button size="xs" color="gradient" onClick={handler} iconRight={<PlayIcon />}>
+              Video
+            </Button>
+
+            <Modal
+              closeButton
+              aria-labelledby="modal-title"
+              open={visible}
+              onClose={closeHandler}
+            >
+              
+              <Modal.Body>
+              <video
+                src="https://res.cloudinary.com/djdp4cavt/video/upload/v1669575675/Mundial/Todo_eso_que_no_se_puede_explicar-Vamos_Argentina_a0klyr.mp4"
+                width="auto"
+                height="auto"
+                controls
+                autoPlay
+                id="video-player"
+              />
+              </Modal.Body>
+              
+            </Modal>
+
             </Grid>
-            <Grid xs={10} md={4}>
+            <Grid xs={6} md={3}>
             <Text color="#9750DD">Música</Text>
                 <Spacer x={1}></Spacer>
                 <Switch
