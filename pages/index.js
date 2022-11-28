@@ -149,7 +149,7 @@ export default function Home() {
         
             <Grid xs={1} md={6} />
             <Grid xs={5} md={3}>
-            <Button size="xs" color="gradient" onClick={handler} iconRight={<PlayIcon />}>
+            <Button size="xs" color="gradient" onClick={handler} iconRight={<PlayIcon />} NormalWeights = "bold">
               Video
             </Button>
 
