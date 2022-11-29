@@ -63,7 +63,7 @@ const Header = () => {
                         }}>
                          
           <Navbar.Link href="/partidos">Fase Grupos</Navbar.Link>
-          <Navbar.Link href="#">Octavos</Navbar.Link>
+          <Navbar.Link href="/octavos">Octavos</Navbar.Link>
           <Navbar.Link href="#">Cuartos</Navbar.Link>
           <Navbar.Link href="#">Semi</Navbar.Link>
           <Navbar.Link href="#">Final</Navbar.Link>
