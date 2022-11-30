@@ -214,27 +214,101 @@ const Header = () => {
           </Navbar.Item>
         </Navbar.Content>
         
-        <Navbar.Collapse>
-          {collapseItems.map((item, index) => (
+        <Navbar.Collapse>          
             <Navbar.CollapseItem
-              key={item}
-              activeColor="secondary"
-              css={{
-                color: index === collapseItems.length - 1 ? "$error" : "",
-              }}
-              isActive={index === 5}
-            >
+              key="Fase Grupos"
+              activeColor="secondary">
               <Link
                 color="inherit"
                 css={{
                   minWidth: "100%",
                 }}
-                href={item==="Fase Grupos" ? "/partidos" : "/"}
+                href="/partidos"
               >
-                {item}
+                Fase Grupos
               </Link>
             </Navbar.CollapseItem>
-          ))}
+            <Navbar.CollapseItem
+              key="Octavos"
+              activeColor="secondary">
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href="/octavos"
+              >
+                Octavos
+              </Link>
+            </Navbar.CollapseItem>
+            <Navbar.CollapseItem
+              key="Cuartos"
+              activeColor="secondary">
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href="/"
+              >
+                Cuartos
+              </Link>
+            </Navbar.CollapseItem>
+            <Navbar.CollapseItem
+              key="Semifinal"
+              activeColor="secondary">
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href="/"
+              >
+                Semifinal
+              </Link>
+            </Navbar.CollapseItem>
+            <Navbar.CollapseItem
+              key="Final"
+              activeColor="secondary">
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href="/"
+              >
+                Final
+              </Link>
+            </Navbar.CollapseItem>
+            <Navbar.CollapseItem
+              key="Music"
+              activeColor="warning"
+              isActive="true">
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href="/"
+              >
+                Music
+              </Link>
+            </Navbar.CollapseItem>
+            <Navbar.CollapseItem
+              key="Home"
+              activeColor="secondary"
+              isActive="true">
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                  color: "secondary"
+                }}
+                href="/"
+              >
+                Home
+              </Link>
+            </Navbar.CollapseItem>
         </Navbar.Collapse>
       </Navbar>
   )
