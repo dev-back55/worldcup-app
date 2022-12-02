@@ -295,6 +295,20 @@ const Header = () => {
               </Link>
             </Navbar.CollapseItem>
             <Navbar.CollapseItem
+              key="Videos"
+              activeColor="success"
+              isActive="true">
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href="/canaltv"
+              >
+                Videos
+              </Link>
+            </Navbar.CollapseItem>
+            <Navbar.CollapseItem
               key="Home"
               activeColor="secondary"
               isActive="true">
