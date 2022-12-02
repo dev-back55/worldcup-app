@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from '../styles/Home.module.scss';
-import { Text, Grid, Container, Spacer, Switch, Row, Button, Modal } from "@nextui-org/react";
+import { Text, Grid, Container, Spacer, Switch, Row, Button, Modal, Link } from "@nextui-org/react";
 import ReactHowler from 'react-howler';
 import { VolumeDown, VolumeUp, VolumeUpIcon } from '../theme';
 // Import Swiper React components
@@ -149,30 +149,11 @@ export default function Home() {
         
             <Grid xs={1} md={6} />
             <Grid xs={5} md={3}>
+            <Link href="/canaltv">
             <Button size="xs" color="gradient" onClick={handler} iconRight={<PlayIcon />} NormalWeights = "bold">
-              Video
+              Videos
             </Button>
-
-            <Modal
-              closeButton
-              aria-labelledby="modal-title"
-              open={visible}
-              onClose={closeHandler}
-            >
-              
-              <Modal.Body>
-              <video
-                src="https://res.cloudinary.com/djdp4cavt/video/upload/v1669575675/Mundial/Todo_eso_que_no_se_puede_explicar-Vamos_Argentina_a0klyr.mp4"
-                width="auto"
-                height="auto"
-                controls
-                autoPlay
-                id="video-player"
-              />
-              </Modal.Body>
-              
-            </Modal>
-
+            </Link>    
             </Grid>
             <Grid xs={6} md={3}>
             <Text color="#9750DD">Música</Text>
