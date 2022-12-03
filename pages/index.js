@@ -145,7 +145,7 @@ export default function Home() {
 
             <div>
             <Link href="https://futbolparatodos.online/es/mundial-ch2/" isExternal target="_blank">
-               <Button size="sm" color="gradient">Previa ARG vs AUS</Button>
+               <Button size="sm" color="gradient">Partido ARG vs AUS</Button>
             </Link>
             </div>
 
