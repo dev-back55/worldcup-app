@@ -5,7 +5,7 @@ import { PlayIcon } from "../theme";
 
 function CardOctavos({octavo}) {
     
-    const { dia, horario, equipo_a, equipo_b, flag_a, flag_b, clave_a, clave_b, canaltv, resumen_url } = octavo
+    const { dia, horario, equipo_a, equipo_b, goles_a, goles_b, flag_a, flag_b, clave_a, clave_b, canaltv, resumen_url } = octavo
 
     const [visible, setVisible] = useState(false);
     const handler = () => setVisible(true);
@@ -17,9 +17,9 @@ function CardOctavos({octavo}) {
     return (
         
         <Grid.Container gap={2} justify="center" justifycontent="center" alignitems="center" aligncontent="center" wrap="wrap">
-        <Grid xs={0} sm={4}>
+        <Grid xs={0} sm={3}>
         </Grid>
-        <Grid xs={12} sm={4}>
+        <Grid xs={12} sm={6}>
         
           <Card css={{ mw: "430px" }} cardvariants = 'shadow'>
             <Card.Header>
@@ -32,7 +32,7 @@ function CardOctavos({octavo}) {
             </Row>
             <Card.Divider />
             <Card.Body css={{ py: "$10" }}>
-              <Grid.Container gap={2} justify="center" >
+              <Grid.Container gap={1} justify="center" >
                 <Grid xs={6} sm={6}>
                   {flag_a ?
                       <Image src={flag_a} width="58px" height="38px" alt={equipo_a} />
@@ -43,22 +43,33 @@ function CardOctavos({octavo}) {
                           <Text>
                           {clave_a}
                           </Text>
-                    :      
+                    :      <>
                           <Text>
                             {(equipo_a).slice(0, 3)}
                           </Text>
+                          <Spacer x={1} />
+                          <div>
+                              <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>{goles_a}</span>
+                            </div>
+                        </>
                   }
                 </Grid>
+                                            
               <Grid xs={6} sm={6}>
                 
                 { !equipo_b ?
                       <Text>
                         {clave_b}
                       </Text>
-                  :    
+                  :    <>
+                      <div>
+                      <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>{goles_b}</span>
+                      </div>
+                      <Spacer x={1} />
                       <Text>
                         {(equipo_b).slice(0, 3)}
                       </Text>
+                      </>
                 }
                 <Spacer x={1} />
                 {flag_b ?
@@ -89,7 +100,7 @@ function CardOctavos({octavo}) {
           </Card>
           
         </Grid>
-        <Grid xs={0} sm={4}>
+        <Grid xs={0} sm={3}>
         </Grid>
         </Grid.Container>
         

@@ -51,7 +51,7 @@ function Final() {
     };
 
     return (
-        <Container display="flex" justify="center" >
+        <Container display="flex" justify="center">
         <Text                       
           css={{          
             fontSize:'calc(2rem + 1vw)',
