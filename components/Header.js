@@ -64,7 +64,7 @@ const Header = () => {
                          
           <Navbar.Link href="/partidos">Fase Grupos</Navbar.Link>
           <Navbar.Link href="/octavos">Octavos</Navbar.Link>
-          <Navbar.Link href="#">Cuartos</Navbar.Link>
+          <Navbar.Link href="/cuartos">Cuartos</Navbar.Link>
           <Navbar.Link href="#">Semi</Navbar.Link>
           <Navbar.Link href="#">Final</Navbar.Link>
         </Navbar.Content>
@@ -230,7 +230,8 @@ const Header = () => {
             </Navbar.CollapseItem>
             <Navbar.CollapseItem
               key="Octavos"
-              activeColor="secondary">
+              activeColor="primary"
+              isActive="true">
               <Link
                 color="inherit"
                 css={{
@@ -243,13 +244,14 @@ const Header = () => {
             </Navbar.CollapseItem>
             <Navbar.CollapseItem
               key="Cuartos"
-              activeColor="secondary">
+              activeColor="error"
+              isActive="true">
               <Link
                 color="inherit"
                 css={{
                   minWidth: "100%",
                 }}
-                href="/"
+                href="/cuartos"
               >
                 Cuartos
               </Link>

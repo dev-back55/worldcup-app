@@ -33,7 +33,7 @@ function CardOctavos({octavo}) {
             <Card.Divider />
             <Card.Body css={{ py: "$10" }}>
               <Grid.Container gap={1} justify="center" >
-                <Grid xs={6} sm={6}>
+                <Grid xs={6} md={6}>
                   {flag_a ?
                       <Image src={flag_a} width="58px" height="38px" alt={equipo_a} />
                     : <Image src={'/icon-512x512.png'} width="38px" height="38px" alt={equipo_a} />  
@@ -43,19 +43,19 @@ function CardOctavos({octavo}) {
                           <Text>
                           {clave_a}
                           </Text>
-                    :      <>
+                    :     <>
                           <Text>
                             {(equipo_a).slice(0, 3)}
                           </Text>
                           <Spacer x={1} />
                           <div>
                               <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>{goles_a}</span>
-                            </div>
-                        </>
+                          </div>
+                          </>
                   }
                 </Grid>
                                             
-              <Grid xs={6} sm={6}>
+              <Grid xs={6} md={6}>
                 
                 { !equipo_b ?
                       <Text>

@@ -143,11 +143,11 @@ export default function Home() {
               </Grid>
             </Grid.Container>
 
-            <div>
+            {/* <div>
             <Link href="https://futbolparatodos.online/es/mundial-ch2/" isExternal target="_blank">
                <Button size="sm" color="gradient">Partido ARG vs AUS</Button>
             </Link>
-            </div>
+            </div> */}
 
         </div>
         <Spacer y={17}></Spacer>
