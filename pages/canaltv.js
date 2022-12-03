@@ -7,42 +7,42 @@ function Final() {
     const [visible, setVisible] = useState(false);
     const handler = () => {
         setVisible(true)
-        setVideosrc("https://res.cloudinary.com/djdp4cavt/video/upload/v1669575675/Mundial/Todo_eso_que_no_se_puede_explicar-Vamos_Argentina_a0klyr.mp4")
+        setVideosrc(process.env.NEXT_PUBLIC_VURL)
     };
 
     const handler2 = () => {
         setVisible(true)
-        setVideosrc("https://res.cloudinary.com/djdp4cavt/video/upload/v1670020921/Mundial/No_se_puede_explicar_r6fian.mp4")
+        setVideosrc(process.env.NEXT_PUBLIC_VURL2)
     };
 
     const handler3 = () => {
         setVisible(true)
-        setVideosrc("https://res.cloudinary.com/djdp4cavt/video/upload/v1670019863/Mundial/La_locura_que_se_vive_con_la_selecci%C3%B3n_Argentina_mvza3r.mp4")
+        setVideosrc(process.env.NEXT_PUBLIC_VURL3)
     };
 
     const handler4 = () => {
         setVisible(true)
-        setVideosrc("https://res.cloudinary.com/djdp4cavt/video/upload/v1670020997/Mundial/Vamos_argentina_que_ma%C3%B1ana_cueste_lo_que_cueste_rcpmq3.mp4")
+        setVideosrc(process.env.NEXT_PUBLIC_VURL4)
     };
 
     const handler5 = () => {
         setVisible(true)
-        setVideosrc("https://res.cloudinary.com/djdp4cavt/video/upload/v1670021014/Mundial/La_fiesta_que_se_vive_con_la_selecci%C3%B3n_en_Doha_b01x3a.mp4")
+        setVideosrc(process.env.NEXT_PUBLIC_VURL5)
     };
 
     const handler6 = () => {
         setVisible(true)
-        setVideosrc("https://res.cloudinary.com/djdp4cavt/video/upload/v1670021000/Mundial/En_cualquier_parte_del_mundo_en_Argentina_nac%C3%AD_f4lmg8.mp4")
+        setVideosrc(process.env.NEXT_PUBLIC_VURL6)
     };
 
     const handler7 = () => {
         setVisible(true)
-        setVideosrc("https://res.cloudinary.com/djdp4cavt/video/upload/v1670020998/Mundial/Unidos_por_un_sue%C3%B1o_Doha_Souq_Waqif_19-30_hs_25-11-22_a7ltch.mp4")
+        setVideosrc(process.env.NEXT_PUBLIC_VURL7)
     };
 
     const handler8 = () => {
         setVisible(true)
-        setVideosrc("https://res.cloudinary.com/djdp4cavt/video/upload/v1669115005/Mundial/GOL_DE_MESSI_-Argentina_1_-_0_Arabia_Saudita_kzayfd.mp4")
+        setVideosrc(process.env.NEXT_PUBLIC_VURL8)
     };
 
     const closeHandler = () => {

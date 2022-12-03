@@ -145,12 +145,12 @@ export default function Home() {
 
         </div>
         <Spacer y={17}></Spacer>
-        <Grid.Container justifyContent="center" alignItems="center" css={{ml:"5rem"}}>
+        <Grid.Container justify="center" alignItems="center" css={{ml:"5rem"}}>
         
             <Grid xs={1} md={6} />
             <Grid xs={5} md={3}>
             <Link href="/canaltv">
-            <Button size="xs" color="gradient" onClick={handler} iconRight={<PlayIcon />} NormalWeights = "bold">
+            <Button size="xs" color="gradient" onClick={handler} iconRight={<PlayIcon />}>
               Videos
             </Button>
             </Link>    
