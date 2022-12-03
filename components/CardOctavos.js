@@ -16,12 +16,12 @@ function CardOctavos({octavo}) {
 
     return (
         
-        <Grid.Container gap={2} justify="center" justifyContent="center" alignItems="center" alignContent="center" wrap="wrap">
+        <Grid.Container gap={2} justify="center" justifycontent="center" alignitems="center" aligncontent="center" wrap="wrap">
         <Grid xs={0} sm={4}>
         </Grid>
         <Grid xs={12} sm={4}>
         
-          <Card css={{ mw: "430px" }} CardVariants = 'shadow'>
+          <Card css={{ mw: "430px" }} cardvariants = 'shadow'>
             <Card.Header>
               <Text b>{new Date(dia).toLocaleDateString('es-Es', { weekday:"long", month:"short", day: 'numeric' })}</Text>
               <Spacer x={4} />
