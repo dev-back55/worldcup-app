@@ -150,7 +150,7 @@ export default function Home() {
             </div> */}
 
         </div>
-        <Spacer y={17}></Spacer>
+        <Spacer y={16}></Spacer>
         
         <Grid.Container justify="center" alignItems="center" css={{ml:"5rem"}}>
         

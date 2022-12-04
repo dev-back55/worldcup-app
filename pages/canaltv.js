@@ -44,6 +44,16 @@ function Final() {
         setVisible(true)
         setVideosrc(process.env.NEXT_PUBLIC_VURL8)
     };
+    
+    const handler9 = () => {
+      setVisible(true)
+      setVideosrc(process.env.NEXT_PUBLIC_VURL9)
+    };
+    
+    const handler10 = () => {
+      setVisible(true)
+      setVideosrc(process.env.NEXT_PUBLIC_VURL10)
+    };
 
     const closeHandler = () => {
     setVisible(false);
@@ -64,6 +74,8 @@ function Final() {
           </Text>
         <Grid.Container justify = 'center' alignItems = 'center' css={{mt: '1rem'}}> 
             <Button.Group size="xl" vertical color="gradient" bordered>
+                <Button onClick={handler9} iconRight={<PlayIcon />}>Gol Leo vs Aus</Button>
+                <Button onClick={handler10} iconRight={<PlayIcon />}>Segui gritando...</Button>
                 <Button onClick={handler} iconRight={<PlayIcon />}>ARG vs MEX</Button>
                 <Button onClick={handler2} iconRight={<PlayIcon />}>Gol de LEO</Button>
                 <Button onClick={handler3} iconRight={<PlayIcon />}>Gol de JULIAN</Button>
