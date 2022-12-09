@@ -264,7 +264,7 @@ const Header = () => {
                 css={{
                   minWidth: "100%",
                 }}
-                href="/"
+                href="/semifinal"
               >
                 Semifinal
               </Link>
@@ -277,7 +277,7 @@ const Header = () => {
                 css={{
                   minWidth: "100%",
                 }}
-                href="/semifinal"
+                href="/"
               >
                 Final
               </Link>
