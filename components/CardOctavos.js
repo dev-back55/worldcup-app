@@ -19,7 +19,7 @@ function CardOctavos({octavo}) {
         <Grid.Container gap={2} justify="center" justifycontent="center" alignitems="center" aligncontent="center" wrap="wrap">
         <Grid xs={0} sm={3}>
         </Grid>
-        <Grid xs={12} sm={6}>
+        <Grid xs={12} sm={6}justify="center">
         
           <Card css={{ mw: "430px" }} cardvariants = 'shadow'>
             <Card.Header>
