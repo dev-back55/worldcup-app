@@ -5,8 +5,8 @@ import { PlayIcon } from "../theme";
 
 function Semifinal() {
     
-    const flag_a =""
-    const flag_b = ""
+    const flag_a ="https://t4.ftcdn.net/jpg/00/03/65/05/240_F_3650524_rojAR7d8GBbG83v8s0VnV4Lm1nbcyb7g.jpg"
+    const flag_b = "https://t3.ftcdn.net/jpg/01/07/55/22/240_F_107552218_I0fgobfytTCXKIFaD9S6n1v7tz1hbMUj.jpg"
 
     const [visible, setVisible] = useState(false);
     const handler = () => setVisible(true);
@@ -119,7 +119,7 @@ function Semifinal() {
                   <Spacer x={1} />
                        <>
                           <Text>
-                            ?
+                            FRA
                           </Text>
                           <Spacer x={1} />
                           <div>
@@ -137,7 +137,7 @@ function Semifinal() {
                       </div>
                       <Spacer x={1} />
                       <Text>
-                        ?
+                        MAR
                       </Text>
                       </>
                 
