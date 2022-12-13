@@ -84,7 +84,7 @@ function Semifinal() {
             <Card.Footer>
               <Row justify="center">
                 <div>
-                    <Link href="#" isExternal target="_blank">
+                    <Link href="https://www.youtube.com/watch?v=lM1bF8hD8-g" isExternal target="_blank">
                         <Button auto color="gradient" iconRight={<PlayIcon />}>
                           Resumen
                         </Button>
