@@ -60,6 +60,41 @@ function Final() {
       setVideosrc(process.env.NEXT_PUBLIC_VURL11)
     };
 
+    const handler12 = () => {
+      setVisible(true)
+      setVideosrc(process.env.NEXT_PUBLIC_VURL12)
+  };
+
+  const handler13 = () => {
+      setVisible(true)
+      setVideosrc(process.env.NEXT_PUBLIC_VURL13)
+  };
+
+  const handler14 = () => {
+      setVisible(true)
+      setVideosrc(process.env.NEXT_PUBLIC_VURL14)
+  };
+
+  const handler15 = () => {
+      setVisible(true)
+      setVideosrc(process.env.NEXT_PUBLIC_VURL15)
+  };
+
+  const handler16 = () => {
+      setVisible(true)
+      setVideosrc(process.env.NEXT_PUBLIC_VURL16)
+  };
+
+  const handler17 = () => {
+      setVisible(true)
+      setVideosrc(process.env.NEXT_PUBLIC_VURL17)
+  };
+
+  const handler18 = () => {
+      setVisible(true)
+      setVideosrc(process.env.NEXT_PUBLIC_VURL18)
+  };
+
     const closeHandler = () => {
     setVisible(false);
     console.log("closed");
@@ -82,6 +117,13 @@ function Final() {
                 <Button color="gradient" auto iconRight={<PlayIcon />}>Streaming con Messi</Button>
                 </Link>
             <Button.Group size="xl" vertical color="gradient" bordered>
+                <Button onClick={handler18} iconRight={<PlayIcon />}>Anto que miras</Button>
+                <Button onClick={handler17} iconRight={<PlayIcon />}>Que Miras Bobo!</Button>
+                <Button onClick={handler16} iconRight={<PlayIcon />}>Leo vs Van Vende Humo</Button>
+                <Button onClick={handler15} iconRight={<PlayIcon />}>Leo y Juli</Button>
+                <Button onClick={handler14} iconRight={<PlayIcon />}>Leo y Dibu</Button>
+                <Button onClick={handler13} iconRight={<PlayIcon />}>Asi pasamos</Button>
+                <Button onClick={handler12} iconRight={<PlayIcon />}>Dibu Dibujito</Button>
                 <Button onClick={handler11} iconRight={<PlayIcon />}>Que Miras...</Button>
                 <Button onClick={handler9} iconRight={<PlayIcon />}>Gol Leo vs Aus</Button>
                 <Button onClick={handler10} iconRight={<PlayIcon />}>Segui gritando...</Button>
