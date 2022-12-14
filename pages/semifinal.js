@@ -157,7 +157,7 @@ function Semifinal() {
               <Row justify="center">
               
                     <div>
-                    <Link href="#" isExternal target="_blank">
+                    <Link href="https://www.youtube.com/watch?v=Bmwuig6kIYY" isExternal target="_blank">
                         <Button auto color="gradient" iconRight={<PlayIcon />}>
                           Resumen
                         </Button>
