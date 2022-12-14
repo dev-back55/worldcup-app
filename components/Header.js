@@ -66,7 +66,7 @@ const Header = () => {
           <Navbar.Link href="/octavos">Octavos</Navbar.Link>
           <Navbar.Link href="/cuartos">Cuartos</Navbar.Link>
           <Navbar.Link href="/semifinal">Semi</Navbar.Link>
-          <Navbar.Link href="#">Final</Navbar.Link>
+          <Navbar.Link href="/final">Final</Navbar.Link>
         </Navbar.Content>
 
         <Navbar.Content hideIn="sm" css={{
@@ -277,7 +277,7 @@ const Header = () => {
                 css={{
                   minWidth: "100%",
                 }}
-                href="/"
+                href="/final"
               >
                 Final
               </Link>
