@@ -111,6 +111,10 @@ const handler22 = () => {
   setVisible(true)
   setVideosrc(process.env.NEXT_PUBLIC_VURL22)
 };
+const handler23 = () => {
+  setVisible(true)
+  setVideosrc(process.env.NEXT_PUBLIC_VURL23)
+};
 
     const closeHandler = () => {
     setVisible(false);
@@ -134,6 +138,7 @@ const handler22 = () => {
                 <Button color="gradient" auto iconRight={<PlayIcon />}>Streaming con Messi</Button>
                 </Link>
             <Button.Group size="xl" vertical color="gradient" bordered>
+                <Button onClick={handler23} iconRight={<PlayIcon />}>Spiderman que golazo!</Button>
                 <Button onClick={handler22} iconRight={<PlayIcon />}>No lo pueden parar</Button>
                 <Button onClick={handler21} iconRight={<PlayIcon />}>ARG 3-0 CRO</Button>  
                 <Button onClick={handler20} iconRight={<PlayIcon />}>ARG 2-0 CRO</Button>
