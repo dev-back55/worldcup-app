@@ -123,7 +123,7 @@ function Semifinal() {
                           </Text>
                           <Spacer x={1} />
                           <div>
-                              <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>1</span>
+                              <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>2</span>
                           </div>
                           </>
                   
