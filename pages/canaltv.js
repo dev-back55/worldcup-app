@@ -95,6 +95,23 @@ function Final() {
       setVideosrc(process.env.NEXT_PUBLIC_VURL18)
   };
 
+  const handler19 = () => {
+    setVisible(true)
+    setVideosrc(process.env.NEXT_PUBLIC_VURL19)
+};
+const handler20 = () => {
+  setVisible(true)
+  setVideosrc(process.env.NEXT_PUBLIC_VURL20)
+};
+const handler21 = () => {
+  setVisible(true)
+  setVideosrc(process.env.NEXT_PUBLIC_VURL21)
+};
+const handler22 = () => {
+  setVisible(true)
+  setVideosrc(process.env.NEXT_PUBLIC_VURL22)
+};
+
     const closeHandler = () => {
     setVisible(false);
     console.log("closed");
@@ -117,6 +134,10 @@ function Final() {
                 <Button color="gradient" auto iconRight={<PlayIcon />}>Streaming con Messi</Button>
                 </Link>
             <Button.Group size="xl" vertical color="gradient" bordered>
+                <Button onClick={handler22} iconRight={<PlayIcon />}>No lo pueden parar</Button>
+                <Button onClick={handler21} iconRight={<PlayIcon />}>ARG 3-0 CRO</Button>  
+                <Button onClick={handler20} iconRight={<PlayIcon />}>ARG 2-0 CRO</Button>
+                <Button onClick={handler19} iconRight={<PlayIcon />}>ARG 1-0 CRO</Button>
                 <Button onClick={handler18} iconRight={<PlayIcon />}>Anto que miras</Button>
                 <Button onClick={handler17} iconRight={<PlayIcon />}>Que Miras Bobo!</Button>
                 <Button onClick={handler16} iconRight={<PlayIcon />}>Leo vs Van Vende Humo</Button>
