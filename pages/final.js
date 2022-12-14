@@ -101,7 +101,7 @@ function Final() {
         
           <Card css={{ mw: "450px" }} cardvariants = 'shadow'>
             <Card.Header>
-              <Text b>TERCER PUESTO Sabado, 17 Dic</Text>
+              <Text b>TERCER PUESTO Sábado, 17 Dic</Text>
               <Spacer x={4} />
               <Text>12hs</Text>
             </Card.Header>
