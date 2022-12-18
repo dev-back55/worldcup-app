@@ -116,11 +116,44 @@ export default function Home() {
                   paddingLeft: "1rem"
                 }}
                 weight="bold">
-                  la final del Mundial se juega en
+                  la final del Mundial se juega ahora
             </Text>
         </div>
-
         <div className={styles.container_countdown}>
+        <Grid.Container gap={1} justify="center" >
+                <Grid xs={6} md={6}>
+                    <Image src="https://t4.ftcdn.net/jpg/01/07/44/93/240_F_107449329_XU4V2Q532Us81EAU5OG255aghqmVtdTH.jpg" width="58px" height="38px" alt="Argentina" />
+                  
+                  <Spacer x={1} />
+                       <>
+                          <Text>
+                            ARG
+                          </Text>
+                          <Spacer x={1} />
+                          <div>
+                              <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>0</span>
+                          </div>
+                        </>
+                </Grid>
+                                            
+              <Grid xs={6} md={6}>
+                
+                    <>
+                      <div>
+                      <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>0</span>
+                      </div>
+                      <Spacer x={1} />
+                      <Text>
+                        FRA
+                      </Text>
+                    </>
+                <Spacer x={1} />
+                   <Image src="https://t4.ftcdn.net/jpg/00/03/65/05/240_F_3650524_rojAR7d8GBbG83v8s0VnV4Lm1nbcyb7g.jpg" width="58px" height="38px" alt="Francia" />
+
+              </Grid>
+              </Grid.Container>
+              </div>
+        {/* <div className={styles.container_countdown}>
             <ul className={styles.count_down}>
                 <li className="days">{dias}</li>
                 <li className="hours">{horas}</li>
@@ -142,14 +175,7 @@ export default function Home() {
                 <Text size="$xs">segundos</Text>
               </Grid>
             </Grid.Container>
-
-            {/* <div>
-            <Link href="https://futbolparatodos.online/es/mundial-ch2/" isExternal target="_blank">
-               <Button size="sm" color="gradient">Partido ARG vs AUS</Button>
-            </Link>
-            </div> */}
-
-        </div>
+        </div> */}
         <Spacer y={16}></Spacer>
         
         <Grid.Container justify="center" alignItems="center" css={{ml:"5rem"}}>
