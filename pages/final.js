@@ -123,7 +123,7 @@ function Final() {
                           </Text>
                           <Spacer x={1} />
                           <div>
-                              <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>0</span>
+                              <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>2</span>
                           </div>
                           </>
                   
@@ -133,7 +133,7 @@ function Final() {
                 
                     <>
                       <div>
-                      <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>0</span>
+                      <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>1</span>
                       </div>
                       <Spacer x={1} />
                       <Text>
@@ -157,7 +157,7 @@ function Final() {
               <Row justify="center">
               
                     <div>
-                    <Link href="#" isExternal target="_blank">
+                    <Link href="https://www.youtube.com/watch?v=BHKUi6dCodk" isExternal target="_blank">
                         <Button auto color="gradient" iconRight={<PlayIcon />}>
                           Resumen
                         </Button>
