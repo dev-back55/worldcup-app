@@ -104,7 +104,7 @@ export default function Home() {
             <Text  h1
             size={60}
             css={{
-              textGradient: "45deg, $blue600 -5%, $red600 80%",
+              textGradient: "45deg, $blue600 10%, $white 80%",
             }}
             weight="bold">ARGENTINA
             </Text>
@@ -112,7 +112,7 @@ export default function Home() {
             <Text  h5
                 size={50}
                 css={{
-                  textGradient: "45deg, $blue600 -5%, $red600 80%",
+                  textGradient: "45deg, $white -5%, $blue600 80%",
                   paddingLeft: "1rem"
                 }}
                 weight="bold">
