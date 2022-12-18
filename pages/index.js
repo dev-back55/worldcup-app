@@ -152,6 +152,11 @@ export default function Home() {
 
               </Grid>
               </Grid.Container>
+              <br/>
+              <div>
+
+              <Image src="https://res.cloudinary.com/djdp4cavt/image/upload/v1671392126/Mundial/ARG_campeon_Leo_levanta_la_copa_csh4nu.jpg" width="750px" height="750px" alt=""></Image>
+              </div>
               </div>
         {/* <div className={styles.container_countdown}>
             <ul className={styles.count_down}>
@@ -176,7 +181,7 @@ export default function Home() {
               </Grid>
             </Grid.Container>
         </div> */}
-        <Spacer y={16}></Spacer>
+        <Spacer y={7}></Spacer>
         
         <Grid.Container justify="center" alignItems="center" css={{ml:"5rem"}}>
         
