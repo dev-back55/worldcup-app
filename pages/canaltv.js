@@ -123,6 +123,14 @@ const handler25 = () => {
   setVisible(true)
   setVideosrc(process.env.NEXT_PUBLIC_VURL25)
 };
+const handler26 = () => {
+  setVisible(true)
+  setVideosrc(process.env.NEXT_PUBLIC_VURL26)
+};
+const handler27 = () => {
+  setVisible(true)
+  setVideosrc(process.env.NEXT_PUBLIC_VURL27)
+};
 
     const closeHandler = () => {
     setVisible(false);
@@ -146,8 +154,10 @@ const handler25 = () => {
                 <Button color="gradient" auto iconRight={<PlayIcon />}>Streaming con Messi</Button>
                 </Link>
             <Button.Group size="xl" vertical color="gradient" bordered>
+                <Button onClick={handler27} iconRight={<PlayIcon />}>Gracias LEO MESSI!</Button>
+                <Button onClick={handler26} iconRight={<PlayIcon />}>ARGENTINA CAMPEON!</Button>
                 <Button onClick={handler25} iconRight={<PlayIcon />}>La araña esta loco!</Button>
-                <Button onClick={handler24} iconRight={<PlayIcon />}>La noiva de Messi</Button>
+                <Button onClick={handler24} iconRight={<PlayIcon />}>La novia de Messi</Button>
                 <Button onClick={handler23} iconRight={<PlayIcon />}>Spiderman que golazo!</Button>
                 <Button onClick={handler22} iconRight={<PlayIcon />}>No lo pueden parar</Button>
                 <Button onClick={handler21} iconRight={<PlayIcon />}>ARG 3-0 CRO</Button>  
