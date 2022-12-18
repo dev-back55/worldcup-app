@@ -56,7 +56,7 @@ function Final() {
                           </Text>
                           <Spacer x={1} />
                           <div>
-                              <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>2</span>
+                              <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>3</span>
                           </div>
                         </>
                 </Grid>
@@ -65,7 +65,7 @@ function Final() {
                 
                     <>
                       <div>
-                      <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>2</span>
+                      <span style={{color: "#9750DD", fontWeight: "bold", fontSize:"1.2rem"}}>3</span>
                       </div>
                       <Spacer x={1} />
                       <Text>
