@@ -18,7 +18,7 @@ const nextConfig = withPWA({
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL
   },
   images: {
-    domains: ['www.worldometers.info', 't3.ftcdn.net', 't4.ftcdn.net'],
+    domains: ['www.worldometers.info', 't3.ftcdn.net', 't4.ftcdn.net', 'res.cloudinary.com'],
   },
 });
 
